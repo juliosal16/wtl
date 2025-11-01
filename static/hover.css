@@ -1,0 +1,91 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.lifeText{
+  padding: 2%;
+  color: rgb(118, 187, 247);
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-family: "Gill Sans", sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background: #36768c;
+  font-family: 'roboto',sans-serif;
+}
+
+
+.card{
+  height: 350px;
+  width: 250;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid white;
+  border-radius: 15px;
+  gap: 15px;
+}
+
+.card-img{
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute; 
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  color: whitesmoke;
+  padding: 30px;
+  background-color: rgb(246, 234, 219);
+  transition: 2s;
+}
+
+.card:hover .card-body{
+ 
+}
+
+.card-title{
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight:500px ;
+}
+
+.card-sub-title{
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 300px;
+}
+
+.card-info{
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.frame{
+  height:900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: yellow;
+  /* align-items: center; */
+}
+
+span{
+  font-size: 2.5em;
+}
+

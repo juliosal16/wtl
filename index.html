@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: rgb(35, 35, 35);
+        margin: 0;
+        padding: 0;
+      }
+
+      .frame {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+      }
+
+      .cardBody {
+        background-color: rgb(0, 84, 84);
+        height: 420px;
+        width: 240px;
+        display: inline-block;
+        box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.16); /* Corrected box-shadow */
+        margin: 25px; /* Added margin for spacing */
+        transition: transform 1.2s ease;
+        color: white;
+      }
+
+      .cardBody:hover {
+        transform: scale(1.1, 1.1);
+        animation-name: glow;
+        animation-duration: 7s;
+        background-color: rgb(0, 120, 120);
+        border: 2px solid goldenrod;
+      }
+
+      @keyframes glow {
+        50% {
+          box-shadow: 0px 0px 50px rgb(251, 251, 251);
+        }
+      }
+
+      img {
+        height: 225px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .cardName {
+        font-size: 15px;
+        padding: 10px; /* Combine padding rules */
+        margin-bottom: 10px;
+      }
+
+      strong {
+        font-size: 20px;
+      }
+
+      .mutualFriends {
+        padding-left: 10px;
+        color: grey;
+        margin-bottom: 15px;
+      }
+
+      button {
+        margin: 10px; /* Added margin for spacing */
+        padding: 5px 10px; /* Combined padding rules */
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: rgba(52, 94, 184, 1);
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      span {
+        /* color: red; */
+        transition: font-size 0.5s;
+        margin-left: 30px;
+        cursor: pointer;
+      }
+
+      span:hover {
+        font-size: 19px;
+      }
+
+      span:active {
+        opacity: 0.7;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: "Gill Sans", sans-serif;
+        font-size: 4em;
+        color: rgb(218, 205, 189);
+      }
+
+      .bottomBtns {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      nav {
+        background-color: #000000;
+        height: 50px;
+        margin-top: -15px;
+        width: 100%;
+      }
+
+      /* Style for the navigation list */
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      /* Style for each navigation item */
+      nav li {
+        margin: 0 20px;
+      }
+
+      /* Style for navigation links */
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      /* Change link color on hover */
+      nav a:hover {
+        color: #f00;
+      }
+
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+      }
+    </style>
+    <link rel="icon" type="image/jpg" href="/static/beTheBest.jpeg" />
+    <title>100 Rules</title>
+  </head>
+  <body>
+    <h1>100 RULES TO LIVE BY</h1>
+
+    <div class="frame"></div>
+
+    <script>
+      const card = [
+        {
+          image: (src = "/static/compass.jpeg"),
+          quote:
+            "<strong>Find</strong> your passion and figure out how to get paid for it.",
+        },
+        ,
+        {
+          image: (src = "/static/gokuIce.gif"),
+          quote:
+            "<strong>Reset</strong> ,restart,refocus. But don't you dare give up",
+        },
+        {
+          image: (src = "/static/ali.webp"),
+          quote:
+            "<strong>Never</strong> hit anyone unless they are an immediete threat.",
+        },
+        {
+          image: (src = "/static/decision.webp"),
+          quote:
+            "<strong>Go</strong> with the decision that will make for a good story",
+        },
+        {
+          image: (src = "/static/don.png"),
+          quote: "<strong>Lower </strong>your standards for no one.",
+        },
+        ,
+        {
+          image: (src = "/static/push.gif"),
+          quote: "<strong>Push</strong> through pain, giving up hurts more",
+        },
+        {
+          image: (src = "/static/compassion.jpeg"),
+          quote:
+            "<strong>Manliness</strong> is not only being able to take care of yourself, but others as well..",
+        },
+        {
+          image: (src = "/static/stages_of_life.jpg"),
+          quote:
+            "<strong>You</strong> are not immortal. You don't have forever. Time is precious and will run out.",
+        },
+        {
+          image: (src = "/static/annaDeArmas.gif"),
+          quote:
+            "<strong>Go </strong>for women out of your leauge. You may end up surprised",
+        },
+        {
+          image: (src = "/static/coolWalk.gif"),
+          quote:
+            "<strong>Walk</strong> like the king, or walk like you don't care who the king is.",
+        },
+        {
+          image: (src = "/static/burningMoney.jpeg"),
+          quote:
+            "<strong>Never</strong> lend anything you can't afford to lose.",
+        },
+        {
+          image: (src = "/static/bullet.jpg"),
+          quote:
+            "<strong>Giving</strong> someone a second chance is like giving someone an extra bullet when they missed the first time",
+        },
+        ,
+        {
+          image: (src = "/static/fake_it.gif"),
+          quote:
+            "<strong>If</strong> you aren't confident, fake it. It will come around..",
+        },
+        {
+          image: (src = "/static/eye.gif"),
+          quote:
+            "<strong>Always </strong>look a person in the eye when you talk to them.",
+        },
+        {
+          image: (src = "/static/tools.webp"),
+          quote:
+            "<strong>Buy</strong> high quality tools, so you only have to buy them once.",
+        },
+        {
+          image: (src = "/static/neverGiveUp.jpeg"),
+          quote:
+            "<strong>Don't</strong> quit! Life can pile on but only you can quit.",
+        },
+        {
+          image: (src = "/static/rain.gif"),
+          quote:
+            "<strong>Cry</strong> as hard as you want but make sure when you stop crying you never cry for the same reason again.",
+        },
+        ,
+        {
+          image: (src = "/static/passion.jpeg"),
+          quote: "<strong>Fuck</strong> the rest, be the best.",
+        },
+        {
+          image: (src = "/static/arnold.jpeg"),
+          quote: "<strong>Train</strong> insane or remain the same",
+        },
+        {
+          image: (src = "/static/focus.jpeg"),
+          quote:
+            "<strong>F</strong>ollow <br/><strong>O</strong>ne <br/><strong>C</strong>ourse <br/><strong>U</strong>ntil <br/><strong>S</strong>ucessful",
+        },
+        ,
+        // ,
+        // {
+        //   image: (src = "/static/gokuWater.gif"),
+        //   quote:
+        //     "<strong>Reset</strong> ,restart,refocus. But don't you dare give up",
+        // },
+        {
+          image: (src = "/static/forget.jpeg"),
+          quote: "<strong>Forget</strong> who forgets you",
+        },
+        ,
+        {
+          image: (src = "/static/love.jpeg"),
+          quote:
+            "<strong>You</strong> still haven't met all the people who are going to love you",
+        },
+        {
+          image: (src = "/static/cheers.gif"),
+          quote: "<strong>It's</strong> not over until I win",
+        },
+        {
+          image: (src = "/static/girlRoad.webp.jpg"),
+          quote: "If she’s not the one, let her go.",
+        },
+        {
+          image: (src = "/static/procesOfLife.gif"),
+          quote:
+            "<strong>Don't</strong> get too attached, remeber what happned last time",
+        },
+        ,
+        {
+          image: (src = "/static/city.webp.jpg"),
+          quote: "<strong>Don't</strong> forget what you promised yourself",
+        },
+        ,
+        {
+          image: (src = "/static/tour.webp.webp"),
+          quote:
+            "<strong>The</strong> grind hits different when you doing it alone",
+        },
+        ,
+        {
+          image: (src = "/static/mirandaWink.gif"),
+          quote:
+            "<strong>Everytime</strong> you see me, I will be doing better than the last time you saw me",
+        },
+        ,
+        {
+          image: (src = "/static/panthern.webp.webp"),
+          quote: "<strong>Never</strong> feel bad for yourself",
+        },
+        ,
+        {
+          image: (src = "/static/kratos.gif"),
+          quote: "<strong>Destroy</strong> what destroys you",
+        },
+        ,
+        {
+          image: (src = "/static/superman.jpg"),
+          quote: "<strong>I</strong> wasn't born to be weak",
+        },
+        ,
+        {
+          image: (src = "/static/gokuWater.gif"),
+          quote:
+            "<strong>Damaged</strong> people are dangerous, because they know they can survive",
+        },
+        ,
+        // ,
+        // {
+        //   image: (src = "/static/gokuWater.gif"),
+        //   quote: "<strong>Get</strong> it done",
+        // },
+        {
+          image: (src = "/static/protect.jpeg"),
+          quote: "<strong>A</strong> boy speaks, a gentleman acts",
+        },
+        ,
+        // ,
+        // {
+        //   image: (src = "/static/gokuWater.gif"),
+        //   quote:
+        //     "<strong>The</strong> pain you feel today will be the strength you feel tomorrow",
+        // },
+        {
+          image: (src = "/static/Train.gif"),
+          quote:
+            "<strong>Not</strong> everyone is meant to be in your future. Some people are just passing through your life to teach you a lesson.",
+        },
+        ,
+        {
+          image: (src = "/static/cell.gif"),
+          quote:
+            "<strong>I'm</strong> working on myself, for myself, by myself",
+        },
+        ,
+        {
+          image: (src = "/static/promise.jpeg"),
+          quote:
+            "<strong>In</strong> the end you will see who is fake, who is true and who would risk it all for you.",
+        },
+        {
+          image: (src = "/static/cap.gif"),
+          quote: "Always bet on yourself, Fuck the odds",
+        },
+      ];
+      let cardHTML = "";
+      let counter = 0;
+
+      for (let i = 0; i < counter; i++) {
+        console.log("You made it to");
+      }
+
+      card.forEach((card) => {
+        cardHTML += `
+          <div class="cardBody">
+            <div><img src="${card.image}" /></div>
+            <div class="cardName">${card.quote}</div>
+            <button>Share</button>
+            <span>&#10084;</span>
+            <footer>
+
+            </footer>
+          </div>
+        `;
+      });
+
+      document.querySelector(".frame").innerHTML = cardHTML; // Updated selector
+    </script>
+
+    <div class="footer">
+      <p>
+        Life rules, 2022–2023 <br />
+        Contact Us • About Us • Loans • 30 Year • Inflation • Car Insurance •
+        Car Models
+      </p>
+    </div>
+  </body>
+</html>

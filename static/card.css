@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(35, 35, 35);
+}
+
+.cardBody {
+  background-color: rgb(0, 84, 84);
+  height: 420px;
+  width: 240px;
+  display: inline-block;
+  box-shadow: 10px 15px 15px rgb(0, 0, 0, 0.16);
+  margin-left: 70px;
+  margin-bottom: 70px;
+  margin-top: 40px;
+  transition: transform 1.2s ease;
+  color: white;
+}
+
+.cardBody:hover {
+  transform: scale(1.1, 1.1);
+  animation-name: glow;
+  animation-duration: 7s;
+  background-color: rgb(0, 120, 120);
+  border:2px solid goldenrod;
+}
+
+@keyframes glow {
+  50% {
+    box-shadow: 0px 0px 50px rgb(251, 251, 251);
+  }
+}
+
+img {
+  height: 225px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.cardName {
+  font-size: 15px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+strong {
+  font-size: 20px;
+}
+.mutualFriends {
+  padding-left: 10px;
+  color: grey;
+  margin-bottom: 15px;
+}
+button {
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(52, 94, 184, 1);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+span {
+  color: red;
+  transition: font-size 0.5s;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+span:hover {
+  font-size: 19px;
+}
+
+span:active {
+  opacity: 0.7;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 4em;
+  color: rgb(218, 205, 189);
+}
+
+.bottomBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav {
+  background-color: #000000;
+}
+
+/* Style for the navigation list */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* Style for each navigation item */
+nav li {
+  margin: 0 20px;
+}
+
+/* Style for navigation links */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Change link color on hover */
+nav a:hover {
+  color: #f00;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+}

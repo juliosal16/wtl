@@ -1,0 +1,87 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* body{
+  text-align: center;
+} */
+
+.box{
+  width: 250px;
+  height: 350px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(3, 83, 83);
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 10px 20px 50px rgba(0,0,0,0.05);
+  transition:transform 1.2s ease;
+
+  
+}
+
+.box:hover{
+  background-color: rgb(94, 14, 14);
+  color: rgb(253, 0, 0);
+  transform: scale(1.2,1.2);
+}
+
+
+.frame{
+  height:400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body{
+  background-color: gray;
+
+}
+
+.container{
+  margin: 30px auto;
+  width: 800px;
+  height: 450px;
+}
+
+img{
+  height: 65%;
+  width: 100%;
+  border-radius: 5%;
+}
+
+p{
+  color: rgb(255, 255, 255);
+  padding: 5%;
+}
+
+.bigContainer{
+  height: 300px;
+  width: 500px;
+  margin: 5px auto;
+  margin-bottom: 10%;
+}
+
+.lifeText{
+  padding: 15%;
+  color: rgb(118, 187, 247);
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-family: "Gill Sans", sans-serif;
+}
+
+footer{
+  height: 150px;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  padding: 2%;
+}
+
+h5{
+  text-align: center;
+}
